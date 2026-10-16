@@ -1,1 +1,260 @@
+/* Augusta National Palette & Page Setup */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f5;
+    color: #2c3e50;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
+/* Dark Mode Overrides */
+body.dark-mode {
+    background-color: #121d17;
+    color: #e2e8e4;
+}
+
+body.dark-mode main {
+    background-color: #1a2920;
+    color: #e2e8e4;
+    border-top-color: #ffc72c;
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3 {
+    color: #ffffff;
+}
+
+body.dark-mode p, 
+body.dark-mode li {
+    color: #d1dcd5;
+}
+
+body.dark-mode .calc-card,
+body.dark-mode .spotlight-card {
+    background-color: #14221a;
+    border-color: #2a4032;
+}
+
+body.dark-mode input,
+body.dark-mode select {
+    background-color: #223528;
+    color: #ffffff;
+    border-color: #3b5c46;
+}
+
+/* Global Navigation Menu */
+header {
+    background-color: #0b4626; /* Masters Green */
+    padding: 15px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 950px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.nav-brand {
+    font-family: 'Georgia', serif;
+    color: #ffc72c; /* Augusta Yellow */
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover, 
+nav a.active {
+    background-color: #ffc72c;
+    color: #0b4626;
+}
+
+.theme-btn {
+    background-color: #ffc72c;
+    color: #0b4626;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.theme-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Central Page Card */
+main {
+    background-color: #ffffff;
+    max-width: 950px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 12px;
+    border-top: 8px solid #0b4626;
+    box-shadow: 0 6px 25px rgba(11, 70, 38, 0.12);
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+h1 {
+    color: #0b4626;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-top: 0;
+    border-bottom: 4px solid #ffc72c;
+    padding-bottom: 14px;
+}
+
+h2 {
+    color: #0b4626;
+    font-size: 1.5rem;
+    margin-top: 35px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #e2e8e4;
+    padding-bottom: 8px;
+}
+
+/* Images */
+.page-image {
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(11, 70, 38, 0.14);
+}
+
+/* Form & Calculator Styles */
+.calc-card {
+    background-color: #fafcfb;
+    border: 2px solid #0b4626;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 25px 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+
+input, select {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.calc-btn {
+    width: 100%;
+    background-color: #0b4626;
+    color: #ffffff;
+    border: 2px solid #0b4626;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.calc-btn:hover {
+    background-color: #ffc72c;
+    color: #0b4626;
+    border-color: #ffc72c;
+}
+
+.result-box {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #eaf2ed;
+    border-radius: 8px;
+    border-left: 6px solid #d81b60;
+}
+
+body.dark-mode .result-box {
+    background-color: #1a3023;
+}
+
+/* Grid & Cards */
+.spotlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.spotlight-card {
+    background-color: #fafcfb;
+    border: 1px solid #e2e8e4;
+    border-radius: 10px;
+    padding: 22px;
+    box-shadow: 0 4px 12px rgba(11, 70, 38, 0.05);
+}
+
+/* Buttons for external links */
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.btn-link {
+    flex: 1 1 200px;
+    display: inline-block;
+    background-color: #0b4626;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #0b4626;
+    transition: all 0.2s ease;
+}
+
+.btn-link:hover {
+    background-color: #ffc72c;
+    color: #0b4626;
+    border-color: #ffc72c;
+}
