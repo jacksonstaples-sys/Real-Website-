@@ -1,4 +1,9 @@
-/* Augusta National Palette & Page Setup */
+/* Smooth Scroll Behavior for Navigation Menu Links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Augusta National Palette & Base Page Reset */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f7f5;
@@ -8,7 +13,7 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Dark Mode Overrides */
+/* Dark Mode Theme Overrides */
 body.dark-mode {
     background-color: #121d17;
     color: #e2e8e4;
@@ -44,7 +49,7 @@ body.dark-mode select {
     border-color: #3b5c46;
 }
 
-/* Global Navigation Menu */
+/* Sticky Global Navigation Menu */
 header {
     background-color: #0b4626; /* Masters Green */
     padding: 15px 20px;
@@ -76,7 +81,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 15px;
+    gap: 12px;
 }
 
 nav a {
@@ -85,15 +90,16 @@ nav a {
     font-weight: bold;
     padding: 8px 12px;
     border-radius: 6px;
+    font-size: 0.95rem;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-nav a:hover, 
-nav a.active {
+nav a:hover {
     background-color: #ffc72c;
     color: #0b4626;
 }
 
+/* Interactivity Control Button */
 .theme-btn {
     background-color: #ffc72c;
     color: #0b4626;
@@ -109,19 +115,25 @@ nav a.active {
     transform: scale(1.05);
 }
 
-/* Central Page Card */
+/* Central Card Layout Container */
 main {
     background-color: #ffffff;
     max-width: 950px;
     width: 90%;
     margin: 40px auto;
-    padding: 40px;
+    padding: 40px 50px;
     border-radius: 12px;
     border-top: 8px solid #0b4626;
     box-shadow: 0 6px 25px rgba(11, 70, 38, 0.12);
 }
 
-/* Headings */
+/* Sections Spacing */
+.content-section {
+    padding-top: 20px;
+    margin-bottom: 35px;
+}
+
+/* Classic Majors Serif Headings */
 h1, h2, h3 {
     font-family: 'Georgia', 'Times New Roman', serif;
 }
@@ -129,22 +141,30 @@ h1, h2, h3 {
 h1 {
     color: #0b4626;
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 2.3rem;
     margin-top: 0;
     border-bottom: 4px solid #ffc72c;
-    padding-bottom: 14px;
+    padding-bottom: 16px;
 }
 
 h2 {
     color: #0b4626;
     font-size: 1.5rem;
-    margin-top: 35px;
+    margin-top: 20px;
     margin-bottom: 16px;
     border-bottom: 2px solid #e2e8e4;
     padding-bottom: 8px;
 }
 
-/* Images */
+h3 {
+    color: #0b4626;
+    font-size: 1.2rem;
+    margin-top: 0;
+    border-left: 5px solid #d81b60; /* Azalea Pink */
+    padding-left: 10px;
+}
+
+/* Images with Depth Shadows & Hover Effects */
 .page-image {
     width: 100%;
     max-width: 850px;
@@ -153,19 +173,24 @@ h2 {
     margin: 20px auto;
     border-radius: 10px;
     box-shadow: 0 6px 18px rgba(11, 70, 38, 0.14);
+    transition: transform 0.3s ease;
 }
 
-/* Form & Calculator Styles */
+.page-image:hover {
+    transform: translateY(-3px);
+}
+
+/* Calculator Form Card */
 .calc-card {
     background-color: #fafcfb;
     border: 2px solid #0b4626;
     border-radius: 12px;
-    padding: 30px;
-    margin: 25px 0;
+    padding: 28px;
+    margin: 20px 0;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -230,7 +255,38 @@ body.dark-mode .result-box {
     box-shadow: 0 4px 12px rgba(11, 70, 38, 0.05);
 }
 
-/* Buttons for external links */
+/* Difficulty Badges */
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-right: 6px;
+}
+
+.badge-hard { background-color: #d81b60; }
+.badge-very-hard { background-color: #8b0000; }
+.badge-medium { background-color: #0b4626; }
+
+/* Body Text & Lists */
+p, li {
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+ul {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+.spotlight-card ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+/* Action Link Buttons */
 .btn-container {
     display: flex;
     flex-wrap: wrap;
@@ -240,12 +296,12 @@ body.dark-mode .result-box {
 }
 
 .btn-link {
-    flex: 1 1 200px;
+    flex: 1 1 220px;
     display: inline-block;
     background-color: #0b4626;
     color: #ffffff;
     text-decoration: none;
-    padding: 12px 18px;
+    padding: 14px 20px;
     border-radius: 8px;
     font-weight: bold;
     text-align: center;
@@ -257,4 +313,5 @@ body.dark-mode .result-box {
     background-color: #ffc72c;
     color: #0b4626;
     border-color: #ffc72c;
+    transform: translateY(-2px);
 }
