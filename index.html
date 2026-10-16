@@ -1,1 +1,130 @@
+<!DOCTYPE html> <!-- Declares the document type as HTML5 -->
+<html lang="en"> <!-- Opens the HTML document and sets language to English -->
+<head> <!-- Opens the head element for metadata and external file links -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caddie Assistant - What Club Should I Hit?</title> <!-- Webpage title -->
+    <link rel="stylesheet" href="styles.css"> <!-- Links the external CSS design file -->
+    <script src="script.js" defer></script> <!-- Links the external JavaScript interactivity file -->
+</head> <!-- Closes the head element -->
+<body> <!-- Opens the body element containing all visible webpage content -->
 
+    <!-- Sticky Global Header & Section Navigation Menu -->
+    <header> <!-- Opens sticky top navigation bar -->
+        <div class="nav-container"> <!-- Flex container to center and space header elements -->
+            <div class="nav-brand">⛳ Caddie Assistant</div> <!-- Site title brand logo -->
+            <nav> <!-- Opens navigation menu -->
+                <ul> <!-- List of internal smooth-scroll section links -->
+                    <li><a href="#calculator">Calculator</a></li> <!-- Smooth scrolls to calculator section -->
+                    <li><a href="#club-distances">Club Distances</a></li> <!-- Smooth scrolls to distance reference -->
+                    <li><a href="#strategy">Strategy</a></li> <!-- Smooth scrolls to course strategy tips -->
+                    <li><a href="#resources">Resources</a></li> <!-- Smooth scrolls to external links -->
+                </ul> <!-- Closes navigation list -->
+            </nav> <!-- Closes navigation bar -->
+            <button id="theme-toggle-btn" class="theme-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button> <!-- Interactive Feature 1: Dark mode toggle button -->
+        </div> <!-- Closes nav container -->
+    </header> <!-- Closes global header -->
+
+    <!-- Main Central Card Wrapper -->
+    <main> <!-- Opens main content wrapper -->
+
+        <!-- Hero Header Section -->
+        <section class="hero-section">
+            <h1>What Club Should I Hit?</h1> <!-- Main site title -->
+            <img src="Golfcourseshot.jpg" alt="A green golf course fairway leading up to the green" class="page-image"> <!-- Main hero image -->
+            <p>Welcome to your personal digital caddie! Enter your target distance and course conditions below to calculate playing distance and find the exact club for your shot.</p> <!-- Introductory paragraph -->
+        </section>
+
+        <!-- SECTION 1: Interactive "What Club Should I Hit?" Calculator -->
+        <section id="calculator" class="content-section"> <!-- Opens calculator section -->
+            <h2>Interactive Distance & Club Calculator</h2> <!-- Section Heading -->
+            
+            <div class="calc-card"> <!-- Opens styled calculator box -->
+                <form onsubmit="calculateClub(event)"> <!-- Form triggering JavaScript calculation -->
+                    <div class="form-group"> <!-- Form group for distance input -->
+                        <label for="yardage-input">Target Distance (Yards):</label> <!-- Input label -->
+                        <input type="number" id="yardage-input" placeholder="e.g. 150" required min="1" max="600"> <!-- Yardage input box -->
+                    </div> <!-- Closes form group -->
+
+                    <div class="form-group"> <!-- Form group for wind selection -->
+                        <label for="wind-select">Wind Condition:</label> <!-- Select label -->
+                        <select id="wind-select"> <!-- Dropdown menu for wind -->
+                            <option value="calm">Calm / No Wind</option> <!-- Option: Calm -->
+                            <option value="headwind">Headwind (Into Your Face +12 yds)</option> <!-- Option: Headwind -->
+                            <option value="tailwind">Tailwind (At Your Back -10 yds)</option> <!-- Option: Tailwind -->
+                        </select> <!-- Closes select dropdown -->
+                    </div> <!-- Closes form group -->
+
+                    <div class="form-group"> <!-- Form group for elevation selection -->
+                        <label for="elevation-select">Elevation / Slope:</label> <!-- Select label -->
+                        <select id="elevation-select"> <!-- Dropdown menu for slope -->
+                            <option value="flat">Flat Fairway</option> <!-- Option: Flat -->
+                            <option value="uphill">Uphill Green (+10 yds)</option> <!-- Option: Uphill -->
+                            <option value="downhill">Downhill Green (-10 yds)</option> <!-- Option: Downhill -->
+                        </select> <!-- Closes select dropdown -->
+                    </div> <!-- Closes form group -->
+
+                    <button type="submit" class="calc-btn">Get Club Recommendation ⛳</button> <!-- Interactive Feature 2: Calculate button -->
+                </form> <!-- Closes calculator form -->
+
+                <!-- Dynamic Output Display Box -->
+                <div id="club-result" class="result-box"> <!-- Dynamic output container updated by JavaScript -->
+                    <p style="text-align: center; margin: 0; color: #666666;">Enter your distance above and click calculate!</p> <!-- Default message -->
+                </div> <!-- Closes result box -->
+            </div> <!-- Closes calculator card -->
+        </section> <!-- Closes calculator section -->
+
+        <!-- SECTION 2: Club Distance Reference Guide -->
+        <section id="club-distances" class="content-section"> <!-- Opens distance guide section -->
+            <h2>Average Club Distance Reference</h2> <!-- Section Heading -->
+            <p>Understanding standard club distances helps you make confident swings. Here is a breakdown of baseline ranges used by our caddie tool:</p> <!-- Section description -->
+
+            <div class="spotlight-grid"> <!-- Side-by-side grid container -->
+                <div class="spotlight-card"> <!-- Card 1: Woods & Hybrids -->
+                    <h3>Woods & Hybrids</h3> <!-- Card Heading -->
+                    <img src="augusta.jpg" alt="Fairway at Augusta National Golf Club" class="page-image"> <!-- Augusta image -->
+                    <ul> <!-- Distance range list -->
+                        <li><span class="badge badge-very-hard">220+ Yds</span> <strong>Driver:</strong> Maximum distance off the tee.</li>
+                        <li><span class="badge badge-hard">200-220 Yds</span> <strong>3-Wood:</strong> Long distance off tee or fairway.</li>
+                        <li><span class="badge badge-medium">185-200 Yds</span> <strong>5-Wood / Hybrid:</strong> Versatile long approach club.</li>
+                    </ul> <!-- Closes list -->
+                </div> <!-- Closes Card 1 -->
+
+                <div class="spotlight-card"> <!-- Card 2: Irons & Wedges -->
+                    <h3>Irons & Wedges</h3> <!-- Card Heading -->
+                    <img src="standrews.jpg" alt="Swilcan Bridge at St Andrews Old Course" class="page-image"> <!-- St Andrews image -->
+                    <ul> <!-- Distance range list -->
+                        <li><span class="badge badge-medium">170-185 Yds</span> <strong>5-Iron:</strong> Long iron for controlled distance.</li>
+                        <li><span class="badge badge-medium">145-160 Yds</span> <strong>7-Iron:</strong> Go-to mid-iron for green approaches.</li>
+                        <li><span class="badge badge-medium">100-120 Yds</span> <strong>Pitching Wedge (PW):</strong> High scoring club.</li>
+                        <li><span class="badge badge-medium">75-95 Yds</span> <strong>Sand Wedge (SW):</strong> Soft landing green approach.</li>
+                    </ul> <!-- Closes list -->
+                </div> <!-- Closes Card 2 -->
+            </div> <!-- Closes grid -->
+        </section> <!-- Closes distance section -->
+
+        <!-- SECTION 3: Course Management & Strategy Tips -->
+        <section id="strategy" class="content-section"> <!-- Opens strategy section -->
+            <h2>Pro Rules for Distance Control</h2> <!-- Section Heading -->
+            <ul> <!-- Bulleted list of course rules -->
+                <li><strong>When in doubt, club up:</strong> Amateurs hit short far more often than long. Take one extra club and swing easy.</li>
+                <li><strong>Account for cold weather:</strong> Cold air is denser than warm air; expect shots to travel 3 to 5 yards shorter in cold temps.</li>
+                <li><strong>Trust the wind calculation:</strong> Headwinds magnify ball spin and cause shots to balloon, costing more yardage than expected!</li>
+            </ul> <!-- Closes bulleted list -->
+        </section> <!-- Closes strategy section -->
+
+        <!-- SECTION 4: External Golf Resources & Links -->
+        <section id="resources" class="content-section"> <!-- Opens external links section -->
+            <h2>Explore Official Golf Resources</h2> <!-- Section Heading -->
+            <p>Check out official tournament scoring, schedules, and course records directly from major golf organizations:</p> <!-- Paragraph -->
+            <div class="btn-container"> <!-- Container for external link buttons -->
+                <a href="https://www.pgatour.com" target="_blank" rel="noopener noreferrer" class="btn-link">Official PGA Tour Website &rarr;</a> <!-- External PGA link -->
+                <a href="https://www.masters.com" target="_blank" rel="noopener noreferrer" class="btn-link">Official Masters Tournament Website &rarr;</a> <!-- External Masters link -->
+                <a href="https://www.standrews.com" target="_blank" rel="noopener noreferrer" class="btn-link">Official St Andrews Links Website &rarr;</a> <!-- External St Andrews link -->
+            </div> <!-- Closes button container -->
+        </section> <!-- Closes resources section -->
+
+    </main> <!-- Closes main content container -->
+
+</body> <!-- Closes body -->
+</html> <!-- Closes root HTML document tag -->
