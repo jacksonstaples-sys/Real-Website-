@@ -164,7 +164,7 @@ h3 {
     padding-left: 10px;
 }
 
-/* Images with Depth Shadows & Hover Effects */
+/* Hero Header Images */
 .page-image {
     width: 100%;
     max-width: 850px;
@@ -178,6 +178,21 @@ h3 {
 
 .page-image:hover {
     transform: translateY(-3px);
+}
+
+/* Card Thumbnail Image Formatting */
+.card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px 0 15px 0;
+    box-shadow: 0 4px 10px rgba(11, 70, 38, 0.12);
+    transition: transform 0.3s ease;
+}
+
+.card-image:hover {
+    transform: scale(1.02);
 }
 
 /* Calculator Form Card */
