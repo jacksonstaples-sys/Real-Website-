@@ -1,1 +1,57 @@
+<!DOCTYPE html> <!-- Declares the document type as HTML5 -->
+<html lang="en"> <!-- Opens HTML element setting language to English -->
+<head> <!-- Opens head block for meta tags and external file links -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caddie Assistant - Club Distances</title> <!-- Page title -->
+    <link rel="stylesheet" href="styles.css"> <!-- Links shared stylesheet -->
+    <script src="script.js" defer></script> <!-- Links shared JavaScript file -->
+</head> <!-- Closes head block -->
+<body> <!-- Opens body section -->
 
+    <!-- Global Navigation Menu -->
+    <header>
+        <div class="nav-container">
+            <div class="nav-brand">⛳ Caddie Assistant</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Calculator</a></li> <!-- Link to Page 1 -->
+                    <li><a href="clubs.html" class="active">Club Distances</a></li> <!-- Active link for Page 2 -->
+                    <li><a href="guide.html">Strategy & Links</a></li> <!-- Link to Page 3 -->
+                </ul>
+            </nav>
+            <button id="theme-toggle-btn" class="theme-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+        </div>
+    </header>
+
+    <main> <!-- Main content card -->
+        <h1>Average Club Distance Reference</h1> <!-- Main heading -->
+
+        <p>Understanding standard club distances helps you make confident swings. Here is a breakdown of baseline ranges used by our caddie tool across famous course layouts:</p>
+
+        <div class="spotlight-grid"> <!-- Side-by-side card grid -->
+            <div class="spotlight-card"> <!-- Card 1 -->
+                <h3>Woods & Hybrids</h3>
+                <img src="augusta.jpg" alt="Fairway at Augusta National Golf Club" class="page-image">
+                <ul>
+                    <li><span class="badge badge-very-hard">220+ Yds</span> <strong>Driver:</strong> Maximum distance off the tee.</li>
+                    <li><span class="badge badge-hard">200-220 Yds</span> <strong>3-Wood:</strong> Long distance off tee or fairway.</li>
+                    <li><span class="badge badge-medium">185-200 Yds</span> <strong>5-Wood / Hybrid:</strong> Versatile long approach club.</li>
+                </ul>
+            </div>
+
+            <div class="spotlight-card"> <!-- Card 2 -->
+                <h3>Irons & Wedges</h3>
+                <img src="standrews.jpg" alt="Swilcan Bridge at St Andrews Old Course" class="page-image">
+                <ul>
+                    <li><span class="badge badge-medium">170-185 Yds</span> <strong>5-Iron:</strong> Long iron for controlled distance.</li>
+                    <li><span class="badge badge-medium">145-160 Yds</span> <strong>7-Iron:</strong> Go-to mid-iron for green approaches.</li>
+                    <li><span class="badge badge-medium">100-120 Yds</span> <strong>Pitching Wedge (PW):</strong> High scoring club.</li>
+                    <li><span class="badge badge-medium">75-95 Yds</span> <strong>Sand Wedge (SW):</strong> Soft landing green approach.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
