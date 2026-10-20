@@ -1,1 +1,48 @@
+<!DOCTYPE html> <!-- Declares the document type as HTML5 -->
+<html lang="en"> <!-- Opens HTML element setting language to English -->
+<head> <!-- Opens head block for meta tags and external file links -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caddie Assistant - Strategy & Resources</title> <!-- Page title -->
+    <link rel="stylesheet" href="styles.css"> <!-- Links shared stylesheet -->
+    <script src="script.js" defer></script> <!-- Links shared JavaScript file -->
+</head> <!-- Closes head block -->
+<body> <!-- Opens body section -->
 
+    <!-- Global Navigation Menu -->
+    <header>
+        <div class="nav-container">
+            <div class="nav-brand">⛳ Caddie Assistant</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Calculator</a></li> <!-- Link to Page 1 -->
+                    <li><a href="clubs.html">Club Distances</a></li> <!-- Link to Page 2 -->
+                    <li><a href="guide.html" class="active">Strategy & Links</a></li> <!-- Active link for Page 3 -->
+                </ul>
+            </nav>
+            <button id="theme-toggle-btn" class="theme-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+        </div>
+    </header>
+
+    <main> <!-- Main content card -->
+        <h1>Course Strategy & Official Resources</h1> <!-- Main heading -->
+
+        <h2>Pro Rules for Distance Control</h2>
+        <ul>
+            <li><strong>When in doubt, club up:</strong> Amateurs hit short far more often than long. Take one extra club and swing easy.</li>
+            <li><strong>Account for cold weather:</strong> Cold air is denser than warm air; expect shots to travel 3 to 5 yards shorter in cold weather.</li>
+            <li><strong>Trust the wind calculation:</strong> Headwinds magnify ball spin and cause shots to balloon, costing more yardage than expected!</li>
+        </ul>
+
+        <h2>Explore Official Golf Resources</h2>
+        <p>Check out official tournament scoring, schedules, and course records directly from major golf organizations:</p>
+        
+        <div class="btn-container">
+            <a href="https://www.pgatour.com" target="_blank" rel="noopener noreferrer" class="btn-link">Official PGA Tour Website &rarr;</a>
+            <a href="https://www.masters.com" target="_blank" rel="noopener noreferrer" class="btn-link">Official Masters Tournament Website &rarr;</a>
+            <a href="https://www.standrews.com" target="_blank" rel="noopener noreferrer" class="btn-link">Official St Andrews Links Website &rarr;</a>
+        </div>
+    </main>
+
+</body>
+</html>
