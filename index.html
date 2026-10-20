@@ -29,27 +29,30 @@
 
         <img src="Golfcourseshot.jpg" alt="A green golf course fairway leading up to the green" class="page-image"> <!-- Main hero image -->
 
-        <p>Welcome to your personal digital caddie! Enter your target distance and current course conditions below to calculate playing distance and find the exact club for your shot.</p>
+        <p>Welcome to your personal digital caddie! Enter your target distance, weather, and turf conditions below to calculate playing distance and find the perfect club.</p>
 
         <!-- Interactive Calculator Section -->
         <h2>Interactive Distance & Club Calculator</h2>
         
         <div class="calc-card">
             <form onsubmit="calculateClub(event)">
+                <!-- Target Distance Input -->
                 <div class="form-group">
                     <label for="yardage-input">Target Distance (Yards):</label>
                     <input type="number" id="yardage-input" placeholder="e.g. 150" required min="1" max="600">
                 </div>
 
+                <!-- Wind Dropdown -->
                 <div class="form-group">
                     <label for="wind-select">Wind Condition:</label>
                     <select id="wind-select">
                         <option value="calm">Calm / No Wind</option>
-                        <option value="headwind">Headwind (Into Your Face +12 yds)</option>
-                        <option value="tailwind">Tailwind (At Your Back -10 yds)</option>
+                        <option value="headwind">Headwind (Into Face +12 yds)</option>
+                        <option value="tailwind">Tailwind (At Back -10 yds)</option>
                     </select>
                 </div>
 
+                <!-- Slope Dropdown -->
                 <div class="form-group">
                     <label for="elevation-select">Elevation / Slope:</label>
                     <select id="elevation-select">
@@ -59,12 +62,42 @@
                     </select>
                 </div>
 
+                <!-- NEW: Temperature Dropdown -->
+                <div class="form-group">
+                    <label for="temp-select">Air Temperature:</label>
+                    <select id="temp-select">
+                        <option value="normal">Moderate / Warm (65°F - 80°F)</option>
+                        <option value="cold">Cold Air (&lt; 50°F) (+8 yds)</option>
+                        <option value="hot">Hot Weather (&gt; 85°F) (-5 yds)</option>
+                    </select>
+                </div>
+
+                <!-- NEW: Rain Dropdown -->
+                <div class="form-group">
+                    <label for="rain-select">Precipitation / Rain:</label>
+                    <select id="rain-select">
+                        <option value="dry">Dry / Clear Sky</option>
+                        <option value="light-rain">Light Rain / Drizzle (+5 yds)</option>
+                        <option value="heavy-rain">Heavy Rain (+10 yds)</option>
+                    </select>
+                </div>
+
+                <!-- NEW: Ground Condition Dropdown -->
+                <div class="form-group">
+                    <label for="ground-select">Ground & Turf Condition:</label>
+                    <select id="ground-select">
+                        <option value="normal">Normal Turf</option>
+                        <option value="wet">Wet / Soggy Turf (+8 yds)</option>
+                        <option value="firm">Firm / Dry Turf (-5 yds)</option>
+                    </select>
+                </div>
+
                 <button type="submit" class="calc-btn">Get Club Recommendation ⛳</button>
             </form>
 
             <!-- Dynamic Output Container -->
             <div id="club-result" class="result-box">
-                <p style="text-align: center; margin: 0; color: #666666;">Enter your distance above and click calculate!</p>
+                <p style="text-align: center; margin: 0; color: #666666;">Enter your distance and conditions above, then click calculate!</p>
             </div>
         </div>
     </main>
