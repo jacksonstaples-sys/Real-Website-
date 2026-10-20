@@ -3,7 +3,7 @@
 <head> <!-- Opens head block for meta tags and external file links -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caddie Assistant - Club Distances</title> <!-- Page title -->
+    <title>Caddie Assistant - Club Distances & Swing Cues</title> <!-- Page title -->
     <link rel="stylesheet" href="styles.css"> <!-- Links shared stylesheet -->
     <script src="script.js" defer></script> <!-- Links shared JavaScript file -->
 </head> <!-- Closes head block -->
@@ -17,7 +17,7 @@
                 <ul>
                     <li><a href="index.html">Calculator</a></li> <!-- Link to Page 1 -->
                     <li><a href="clubs.html" class="active">Club Distances</a></li> <!-- Active link for Page 2 -->
-                    <li><a href="guide.html">Strategy & Links</a></li> <!-- Link to Page 3 -->
+                    <li><a href="guide.html">Strategy & Rules</a></li> <!-- Link to Page 3 -->
                 </ul>
             </nav>
             <button id="theme-toggle-btn" class="theme-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
@@ -25,33 +25,93 @@
     </header>
 
     <main> <!-- Main content card -->
-        <h1>Average Club Distance Reference</h1> <!-- Main heading -->
+        <h1>Club Distance & Swing Cue Guide</h1> <!-- Page Heading -->
+        
+        <img src="driver.jpg" alt="Golfer preparing for a driver tee shot on a championship fairway" class="page-image"> <!-- Hero header image -->
 
-        <p>Understanding standard club distances helps you make confident swings. Here is a breakdown of baseline ranges used by our caddie tool across famous course layouts:</p>
+        <p>Knowing your average yardage is only half the battle. Pair your target distances with these proven caddie setup and swing cues to strike every club solidly off the turf or tee.</p>
 
-        <div class="spotlight-grid"> <!-- Side-by-side card grid -->
-            <div class="spotlight-card"> <!-- Card 1 -->
-                <h3>Woods & Hybrids</h3>
-                <img src="augusta.jpg" alt="Fairway at Augusta National Golf Club" class="page-image">
+        <!-- 2x2 Grid of Club Category Cards -->
+        <div class="spotlight-grid">
+
+            <!-- CARD 1: Driver & Fairway Woods -->
+            <div class="spotlight-card">
+                <h3>Driver & Fairway Woods</h3>
+                <img src="augusta.jpg" alt="Fairway at Augusta National Golf Club" class="card-image">
+                
+                <h4>🎯 Distance Baseline</h4>
                 <ul>
                     <li><span class="badge badge-very-hard">220+ Yds</span> <strong>Driver:</strong> Maximum distance off the tee.</li>
-                    <li><span class="badge badge-hard">200-220 Yds</span> <strong>3-Wood:</strong> Long distance off tee or fairway.</li>
-                    <li><span class="badge badge-medium">185-200 Yds</span> <strong>5-Wood / Hybrid:</strong> Versatile long approach club.</li>
+                    <li><span class="badge badge-hard">200-220 Yds</span> <strong>3-Wood:</strong> Long option off tee or turf.</li>
+                </ul>
+
+                <h4>💡 Caddie Swing Cues</h4>
+                <ul>
+                    <li><strong>Ball Position:</strong> Inside lead heel (front foot).</li>
+                    <li><strong>Spine Angle:</strong> Tilt shoulders slightly back away from target to sweep UP on the ball.</li>
+                    <li><strong>Swing Thought:</strong> <em>"Wide takeaway, smooth tempo, stay behind the ball at impact."</em></li>
                 </ul>
             </div>
 
-            <div class="spotlight-card"> <!-- Card 2 -->
-                <h3>Irons & Wedges</h3>
-                <img src="standrews.jpg" alt="Swilcan Bridge at St Andrews Old Course" class="page-image">
+            <!-- CARD 2: Hybrids & Long Irons -->
+            <div class="spotlight-card">
+                <h3>Hybrids & Long Irons</h3>
+                <img src="standrews.jpg" alt="Swilcan Bridge at St Andrews Old Course" class="card-image">
+                
+                <h4>🎯 Distance Baseline</h4>
                 <ul>
-                    <li><span class="badge badge-medium">170-185 Yds</span> <strong>5-Iron:</strong> Long iron for controlled distance.</li>
-                    <li><span class="badge badge-medium">145-160 Yds</span> <strong>7-Iron:</strong> Go-to mid-iron for green approaches.</li>
-                    <li><span class="badge badge-medium">100-120 Yds</span> <strong>Pitching Wedge (PW):</strong> High scoring club.</li>
-                    <li><span class="badge badge-medium">75-95 Yds</span> <strong>Sand Wedge (SW):</strong> Soft landing green approach.</li>
+                    <li><span class="badge badge-medium">185-200 Yds</span> <strong>5-Wood / Hybrid:</strong> Versatile long approach.</li>
+                    <li><span class="badge badge-medium">170-185 Yds</span> <strong>4 & 5-Iron:</strong> Long green approach.</li>
+                </ul>
+
+                <h4>💡 Caddie Swing Cues</h4>
+                <ul>
+                    <li><strong>Ball Position:</strong> One ball width forward of stance center.</li>
+                    <li><strong>Stance:</strong> Shoulder-width with level hips.</li>
+                    <li><strong>Swing Thought:</strong> <em>"Let the club loft work—brush the grass, don't chop down."</em></li>
                 </ul>
             </div>
-        </div>
-    </main>
+
+            <!-- CARD 3: Mid & Short Irons -->
+            <div class="spotlight-card">
+                <h3>Mid & Short Irons</h3>
+                <img src="pebblebeach.jpg" alt="Pebble Beach coastal ocean golf hole" class="card-image">
+                
+                <h4>🎯 Distance Baseline</h4>
+                <ul>
+                    <li><span class="badge badge-medium">145-160 Yds</span> <strong>7-Iron:</strong> Go-to mid-iron scoring club.</li>
+                    <li><span class="badge badge-medium">120-135 Yds</span> <strong>8 & 9-Iron:</strong> High trajectory pin hunter.</li>
+                </ul>
+
+                <h4>💡 Caddie Swing Cues</h4>
+                <ul>
+                    <li><strong>Ball Position:</strong> Dead center of your stance.</li>
+                    <li><strong>Weight Distribution:</strong> 55% weight on your lead foot at address.</li>
+                    <li><strong>Swing Thought:</strong> <em>"Compress the ball—hit ball first, take a small divot AFTER impact."</em></li>
+                </ul>
+            </div>
+
+            <!-- CARD 4: Wedges & Short Game -->
+            <div class="spotlight-card">
+                <h3>Scoring Wedges & Pitching</h3>
+                <img src="putting.jpg" alt="Golfer putting near the hole on a green" class="card-image">
+                
+                <h4>🎯 Distance Baseline</h4>
+                <ul>
+                    <li><span class="badge badge-medium">100-120 Yds</span> <strong>Pitching Wedge (PW):</strong> Full wedge control.</li>
+                    <li><span class="badge badge-medium">75-95 Yds</span> <strong>Sand Wedge (SW):</strong> High soft landing approach.</li>
+                </ul>
+
+                <h4>💡 Caddie Swing Cues</h4>
+                <ul>
+                    <li><strong>Ball Position:</strong> Slightly back of center (near trail heel for chips).</li>
+                    <li><strong>Stance:</strong> Narrow stance with feet open to target.</li>
+                    <li><strong>Swing Thought:</strong> <em>"Accelerate through impact—never decelerate on short swings!"</em></li>
+                </ul>
+            </div>
+
+        </div> <!-- Closes spotlight grid -->
+    </main> <!-- Closes main container -->
 
 </body>
 </html>
